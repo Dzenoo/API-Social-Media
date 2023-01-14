@@ -50,10 +50,10 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    "mongodb+srv://Dzenis:BZjS88NZKV9lV0et@cluster0.8suhkcc.mongodb.net/Todo?retryWrites=true&w=majority"
+    "mongodb+srv://:@cluster0.8suhkcc.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => {
-    app.listen(8000);
+    app.listen(PORT);
   })
   .catch((err) => {
     console.log(err);
