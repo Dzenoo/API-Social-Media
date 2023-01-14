@@ -99,7 +99,7 @@ exports.signup = async (req, res, next) => {
         userId: createdUser.id,
         name: createdUser.name,
       },
-      "tajnistring",
+      "",
       { expiresIn: "1h" }
     );
   } catch (err) {
@@ -165,7 +165,7 @@ exports.login = async (req, res, next) => {
         userId: existingUser.id,
         name: existingUser.name,
       },
-      "tajnistring",
+      "",
       { expiresIn: "1h" }
     );
   } catch (err) {
