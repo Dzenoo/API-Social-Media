@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const mongoose = require("mongoose");
 const fs = require("fs");
+
 const HttpError = require("../models/http-error");
 
 const User = require("../models/user");
@@ -20,7 +21,6 @@ exports.getTodos = async (req, res, next) => {
 
 exports.getTodoById = async (req, res, next) => {
   const todoId = req.params.tid;
-
   let todoById;
   try {
     todoById = await Todo.findById(todoId);
@@ -39,7 +39,6 @@ exports.getTodoById = async (req, res, next) => {
     );
     return next(error);
   }
-
   res.json({ todoById });
 };
 
