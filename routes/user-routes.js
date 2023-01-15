@@ -3,7 +3,6 @@ const { check } = require("express-validator");
 
 const userContollers = require("../controllers/user-controllers");
 const fileUpload = require("../middlewares/file-upload");
-
 const router = express.Router();
 
 router.get("/", userContollers.getUsers);
