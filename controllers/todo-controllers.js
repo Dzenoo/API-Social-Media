@@ -10,7 +10,7 @@ const Todo = require("../models/todo");
 exports.getTodos = async (req, res, next) => {
   let todosEi;
   try {
-    todosEi = await Todo.find();
+    todosEi = await Todo.find().populate("creator");
   } catch (err) {
     const error = new HttpError("Fetching todos failed, please try again", 500);
     return next(error);
