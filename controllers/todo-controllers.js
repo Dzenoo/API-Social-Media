@@ -7,6 +7,7 @@ const HttpError = require("../models/http-error");
 const User = require("../models/user");
 const Todo = require("../models/todo");
 
+
 exports.getTodos = async (req, res, next) => {
   let todosEi;
   try {
@@ -18,6 +19,7 @@ exports.getTodos = async (req, res, next) => {
 
   res.json({ todosEi });
 };
+
 
 exports.getTodoById = async (req, res, next) => {
   const todoId = req.params.tid;
