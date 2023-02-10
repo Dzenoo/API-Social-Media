@@ -9,5 +9,4 @@ const userSchema = new Schema({
   image: { type: String, required: true },
   todos: [{ type: mongoose.Types.ObjectId, required: true, ref: "Todo" }],
 });
-
 module.exports = mongoose.model("User", userSchema);
