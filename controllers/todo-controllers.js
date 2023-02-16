@@ -1,11 +1,7 @@
 const { validationResult } = require("express-validator");
-
 const mongoose = require("mongoose");
-
 const fs = require("fs");
-
 const HttpError = require("../models/http-error");
-
 const User = require("../models/user");
 const Todo = require("../models/todo");
 
