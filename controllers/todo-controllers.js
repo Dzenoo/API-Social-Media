@@ -60,6 +60,7 @@ exports.getTodoByUserId = async (req, res, next) => {
   });
 };
 
+
 exports.createTodo = async (req, res, next) => {
   const error = validationResult(req);
   if (!error.isEmpty()) {
